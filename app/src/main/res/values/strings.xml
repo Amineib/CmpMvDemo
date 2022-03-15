@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FlixMovies</string>
+    <string name="most_popular">Most popular</string>
+    <string name="upcoming_movies">Upcoming Movies</string>
+    <string name="top_rated">Top rated movies</string>
+    <string name="loading_message">Loading..</string>
+    <string name="no_video_found">couldn\'t find a video source for this movie..</string>
+    <string name="back">Back</string>
+    <string name="you_might_also_like">You might also like</string>
+    <string name="search_hint">Search..</string>
+    <string name="discover_movie_button">Discover movie</string>
+    <string name="discover_serie_button">Discover Serie</string>
+</resources>
