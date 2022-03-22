@@ -1,10 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id("kotlin-kapt")
-    id('dagger.hilt.android.plugin')
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.5.30"
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.30'
+    id 'applovin-quality-service'
 
+}
+applovin {
+    apiKey = "RLEmAFNzLJi83CsTlQsfDwFxOTJA_yk1k_EFzD1WRNWd4IB6HyCMwh7PZX_DnMMJXCUCspTuFWzqQ7_Sdemgtl"
 }
 
 android {
@@ -14,8 +18,9 @@ android {
         applicationId "com.naar.nmovies"
         minSdk 21
         targetSdk 31
-        versionCode 1
-        versionName "1"
+        versionCode 1.2
+        versionName "1.2"
+        resources.addAll(listOf("en","fr"))
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -115,6 +120,12 @@ dependencies {
 
     //RATE THIS APP
     implementation 'io.github.kobakei:ratethisapp:1.2.0'
+
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.applovin:applovin-sdk:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+
 
 }
 

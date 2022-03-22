@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -28,6 +29,10 @@ fun SerieListScreen(
     onItemClicked : (Int) -> Unit
 ) {
 
+    viewModel.context = LocalContext.current
+    viewModel.createInterstitial()
+
+
     Scaffold(
 
     ) {
@@ -41,7 +46,7 @@ fun SerieListScreen(
                 viewModel.uiEvent.collect {  event ->
                     when(event)
                     {
-                        is UiEvent.NavigateToSerie -> {
+                        is SerieListEvent.OnItemClicked -> {
                             onItemClicked(event.serieId)
                         }
                     }
@@ -62,7 +67,9 @@ fun SerieListScreen(
                                 .height(300.dp)
                                 .fillMaxWidth()
                                 .padding(4.dp),
-                            onItemClicked = { onItemClicked(serie.id) }
+                            onItemClicked = {
+                                viewModel.onEvent(SerieListEvent.OnItemClicked(serie.id))
+                            }
                         )
                     }
                 }

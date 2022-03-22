@@ -49,6 +49,7 @@ fun MovieDetailScreen(
     viewModel.context = context
     viewModel.loadMovie(movieId = movieId)
     viewModel.loadMovieRecommandations()
+    viewModel.createInterstitial()
     val state = viewModel.state
     val movie = state.movie
     val recommendations = viewModel.recommandations

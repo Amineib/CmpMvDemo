@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FlixMovies</string>
+    <string name="app_name">N-Movies</string>
     <string name="most_popular">Most popular</string>
     <string name="upcoming_movies">Upcoming Movies</string>
     <string name="top_rated">Top rated movies</string>

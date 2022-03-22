@@ -7,8 +7,6 @@ sealed class UiEvent {
     data class NavigateToMovie(val movieId: Int) : UiEvent()
     data class NavigateToSerie(val serieId: Int) : UiEvent()
     data class ShowSnackBar(val message: UiText): UiEvent()
-    data class ShowInterstitial(val context: Context): UiEvent()
-
 }
 
 sealed class UiText {

@@ -2,18 +2,24 @@ package com.naar.nmovies.navigation
 
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.naar.nmovies.utils.UiEvent
+import kotlinx.coroutines.flow.collect
 
 @Composable
 fun BottomNavigationMenu(
     navController: NavController
 ) {
     val items = navigationItems
-    
+
+
     BottomNavigation(
         backgroundColor = MaterialTheme.colors.surface,
         contentColor = MaterialTheme.colors.onSurface
@@ -42,3 +48,6 @@ fun BottomNavigationMenu(
         }
     }
 }
+
+
+

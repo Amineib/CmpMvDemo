@@ -10,8 +10,17 @@
         <entry key="../../../../../layout/compose-model-1647344589129.xml" value="0.5884476534296029" />
         <entry key="../../../../../layout/compose-model-1647346860317.xml" value="0.1423141891891892" />
         <entry key="../../../../../layout/compose-model-1647347034784.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_local_movies_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_baseline_movie_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_launcher_flixmovies_background.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/ic_outline_error_outline_24.xml" value="0.1765" />
+        <entry key="app/src/main/res/drawable/movies_background.xml" value="0.1765" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.16510416666666666" />
       </map>
     </option>
   </component>

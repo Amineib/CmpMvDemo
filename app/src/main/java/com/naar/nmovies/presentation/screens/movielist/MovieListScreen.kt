@@ -12,6 +12,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -20,6 +21,8 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.kobakei.ratethisapp.RateThisApp
 import com.naar.nmovies.presentation.screens.movielist.components.MovieListItem
 import com.naar.nmovies.presentation.screens.serielist.items
+import com.naar.nmovies.utils.UiEvent
+import kotlinx.coroutines.flow.collect
 
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -30,6 +33,19 @@ fun MovieListScreen(
     onMovieClicked: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
+
+    viewModel.context = LocalContext.current
+    viewModel.createInterstitial()
+
+    LaunchedEffect(true){
+        viewModel.uiEvent.collect { event ->
+            when(event){
+                is MovieListEvent.OnNavigate -> {
+                    onMovieClicked(event.movieId)
+                }
+            }
+        }
+    }
 
     Scaffold(
 
@@ -54,7 +70,8 @@ fun MovieListScreen(
                 items(movies){ movie ->
                     movie?.let {
                         MovieListItem(movie = it, onClick = {
-                            onMovieClicked(it)
+                            viewModel.onEvent(MovieListEvent.OnNavigate(it))
+                            //onMovieClicked(it)
                         },
                             modifier = Modifier.height(300.dp).clip(RoundedCornerShape(20.dp)).padding(2.dp).shadow(2.dp)
                         )
