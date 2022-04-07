@@ -18,9 +18,9 @@ android {
         applicationId "com.naar.nmovies"
         minSdk 21
         targetSdk 31
-        versionCode 1.2
-        versionName "1.2"
-        resources.addAll(listOf("en","fr"))
+        versionCode 1
+        versionName "1"
+        resConfigs "en","es-rES","pt-rBr"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

@@ -34,6 +34,7 @@ import java.lang.Exception
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
+
 @HiltViewModel
 class MovieDetailsViewModel @Inject constructor(
     private val useCase: GetMovieUseCase
