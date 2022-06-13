@@ -5,7 +5,6 @@ object Constants {
     const val BASE_URL = "https://api.themoviedb.org/3/"
     const val BASE_IMG_URL = "https://image.tmdb.org/t/p/w500"
     const val BASE_YOUTUBE_URL = "https://youtube.com/watch?v="
-    const val PAGE_SIZE = 20
 
     val APPLOVIN_BANNER = "NOT_WORKING"
     val APPLOVIN_INTERSTITIAL = "NOT_WORKING"
