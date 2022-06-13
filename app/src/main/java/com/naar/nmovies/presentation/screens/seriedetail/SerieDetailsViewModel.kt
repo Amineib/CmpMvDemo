@@ -48,12 +48,13 @@ class SerieDetailsViewModel @Inject constructor(
     fun onEvent(event: SerieDetailEvent){
         when(event){
             is SerieDetailEvent.OnPlayVideoButtonClicked -> {
-                if(interstitialAd.isReady){
-                    interstitialAd.showAd()
+                /*if(interstitialAd.isReady){
+                    //interstitialAd.showAd()
                 }
                 else{
                     playMovieVideo()
-                }
+                }*/
+                playMovieVideo()
 
             }
         }

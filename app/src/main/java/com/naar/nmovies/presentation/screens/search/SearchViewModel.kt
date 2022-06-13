@@ -52,12 +52,14 @@ class SearchViewModel @Inject constructor(
     fun onEvent(event: SearchEvent){
         when(event){
             is SearchEvent.OnSearch -> {
-                if(interstitialAd.isReady){
-                    interstitialAd.showAd()
+                /*if(interstitialAd.isReady){
+                    //interstitialAd.showAd()
+                    executeSearch()
                 }
                 else{
                     executeSearch()
-                }
+                }*/
+                executeSearch()
             }
             is SearchEvent.OnQueryChange -> {
                 searchState = searchState.copy(searchQuery = event.query)

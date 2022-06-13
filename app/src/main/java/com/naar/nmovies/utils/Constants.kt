@@ -7,6 +7,6 @@ object Constants {
     const val BASE_YOUTUBE_URL = "https://youtube.com/watch?v="
     const val PAGE_SIZE = 20
 
-    val APPLOVIN_BANNER = "515803bd22d87500"
-    val APPLOVIN_INTERSTITIAL = "d83d566057f36cc5"
+    val APPLOVIN_BANNER = "NOT_WORKING"
+    val APPLOVIN_INTERSTITIAL = "NOT_WORKING"
 }

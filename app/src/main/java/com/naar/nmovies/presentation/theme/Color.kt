@@ -2,23 +2,32 @@ package com.naar.nmovies.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
 
 
 
-val BlackGrey = Color(0xFF212121)
-val LightGrey = Color(0xFF484848)
-val DarktGrey = Color(0xFF000000)
+/*
+Light Theme
+*/
 
 
-val Reddish = Color(0xFFb71c1c)
-val LightReddish = Color(0xFFf05545)
-val DarkReddish = Color(0xFF7f0000)
+//PRIMARY
+val BLUE900 = Color(0xff1A4971)
+val BLUE700 = Color(0xff215e91)
+val BLUE500 = Color(0xff2b79bb)
+val BLUE300 = Color(0xff6eaade)
+val BLUE100 = Color(0xffc1dbf1)
+
+//SECONDARY
+val GOLD900 = Color(0xff40330c)
+val GOLD700 = Color(0xff96781d)
+val GOLD500 = Color(0xffdab33e)
+val GOLD300 = Color(0xffebd594)
+val GOLD100 = Color(0xfffbf7ea)
 
 
+/*
+Dark Theme
+ */
 
 
 //GREYS

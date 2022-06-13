@@ -67,12 +67,14 @@ class MovieDetailsViewModel @Inject constructor(
                 }
             }
             is MovieDetailEvent.OnPlayVideoButtonClicked -> {
-                if(interstitialAd.isReady){
-                    interstitialAd.showAd()
+                /*if(interstitialAd.isReady){
+                    //interstitialAd.showAd()
+                    playMovieVideo()
                 }
                 else{
                     playMovieVideo()
-                }
+                }*/
+                playMovieVideo()
             }
         }
     }

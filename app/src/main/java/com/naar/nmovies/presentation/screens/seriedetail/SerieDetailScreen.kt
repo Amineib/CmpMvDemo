@@ -43,7 +43,7 @@ fun SerieDetailScreen(
         var context = LocalContext.current
         viewModel.context = context
         viewModel.loadSerieDetail(serieId)
-        viewModel.createInterstitial()
+        //viewModel.createInterstitial()
         val serie = viewModel.state.serie
         val listState = rememberLazyListState()
         val scaffoldState = rememberScaffoldState()

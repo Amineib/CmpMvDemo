@@ -30,7 +30,7 @@ fun SerieListScreen(
 ) {
 
     viewModel.context = LocalContext.current
-    viewModel.createInterstitial()
+    //viewModel.createInterstitial()
 
 
     Scaffold(

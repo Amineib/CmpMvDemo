@@ -55,14 +55,16 @@ class MovieListViewModel @Inject constructor(
     fun onEvent(event: MovieListEvent){
         when(event){
             is MovieListEvent.OnNavigate -> {
-                if(interstitialAd.isReady){
+                /*if(interstitialAd.isReady){
                     movieId = event.movieId
-                    interstitialAd.showAd()
+                    //interstitialAd.showAd()
                 }
                 else{
                     movieId = event.movieId
                     notifyAdDone()
-                }
+                }*/
+                movieId = event.movieId
+                notifyAdDone()
             }
         }
     }

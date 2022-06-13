@@ -41,7 +41,7 @@ fun SearchScreen(
     var series = state.series.value.collectAsLazyPagingItems()
     val context = LocalContext.current
     viewModel.context = context
-    viewModel.createInterstitial()
+    //viewModel.createInterstitial()
 
     Column (
         modifier = modifier

@@ -51,14 +51,17 @@ class SerieListViewModel @Inject constructor(serieUseCase: GetSerieUseCase) : Vi
     fun onEvent(event: SerieListEvent){
         when(event){
             is SerieListEvent.OnItemClicked -> {
-                if(interstitialAd.isReady){
+                /*if(interstitialAd.isReady){
                     serieId = event.serieId
-                    interstitialAd.showAd()
+                    //interstitialAd.showAd()
+                    notifyAdDone()
                 }
                 else{
                     serieId = event.serieId
                     notifyAdDone()
-                }
+                }*/
+                serieId = event.serieId
+                notifyAdDone()
             }
         }
     }

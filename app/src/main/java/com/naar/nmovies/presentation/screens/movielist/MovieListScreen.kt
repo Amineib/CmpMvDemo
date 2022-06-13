@@ -35,7 +35,7 @@ fun MovieListScreen(
 ) {
 
     viewModel.context = LocalContext.current
-    viewModel.createInterstitial()
+    //viewModel.createInterstitial()
 
     LaunchedEffect(true){
         viewModel.uiEvent.collect { event ->
